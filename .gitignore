@@ -1,0 +1,6 @@
+.idea/*
+*.pyc
+*.pyo
+migrations/*
+settings.py
+*.py~
