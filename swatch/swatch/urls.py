@@ -15,9 +15,22 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from django.conf import settings
+from django.conf.urls.static import static
 from views import signup_view
-
-urlpatterns = [
+from views import homepage_view
+from views import login_view,feed_view,post_view,comment_view,like_view
+from . import views
+urlpatterns = [	
+		#.....the rest of your urlconf goes here....
     url(r'^admin/', admin.site.urls),
-    url(r'^',signup_view),
-]
+    url(r'^home/',homepage_view),
+    url(r'^signup/',signup_view),
+    url(r'^activate/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$', views.activate, name='activate'),
+    url(r'^login/',login_view),
+    url(r'^feed/',feed_view),
+    url(r'^post/',post_view),
+    url(r'^like/', like_view),
+    url(r'^comment/',comment_view)
+    
+] 
