@@ -1,4 +1,4 @@
-"""swatch URL Configuration
+"""myproject URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.11/topics/http/urls/
@@ -18,16 +18,14 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 from views import signup_view
-from views import login_view,feed_view,post_view,comment_view,like_view
-from . import views
-urlpatterns = [	
-		#.....the rest of your urlconf goes here....
+from views import login_view,feed_view,post_view,like_view,comment_view
+
+urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^signup/',signup_view),
-    url(r'^login/',login_view),
-    url(r'^feed/',feed_view),
-    url(r'^post/',post_view),
+    url(r'^signup', signup_view),
+    url(r'^login', login_view),
+    url(r'^feed/', feed_view),
+    url(r'^post/', post_view),
     url(r'^like/', like_view),
-    url(r'^comment/',comment_view),
-    
-] 
+    url(r'^comment/', comment_view),
+]
