@@ -4,7 +4,7 @@ from models import UserModel,PostModel,LikeModel,CommentModel
 class SignUpForm(forms.ModelForm):
 	class Meta:
 		model=UserModel
-		fields = [ 'username','email','password']
+		fields = [ 'Username','Email','Password']
 
 
 
@@ -13,7 +13,7 @@ class LoginForm(forms.ModelForm):
 	class Meta:
 
 		model=UserModel
-		fields=['email','password']
+		fields=['Username','Password']
 
 
 class PostForm(forms.ModelForm):

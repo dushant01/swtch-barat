@@ -1,18 +1,36 @@
 {% load static %}
+
 <!DOCTYPE html>
+
+
 <html lang="en">
+
 	<head>
-		<meta charset="UTF-8">
-		<title>FEEDS</title>
-		<!--Bootstrap-->
-		<link href="{% static "css/bootstrap.css"  %}" rel="stylesheet">
+	
+	<meta charset="UTF-8">
+	
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>FEEDS</title>
+		
+<!--Bootstrap-->
+		
+<link href="{% static "css/bootstrap.css"  %}" rel="stylesheet">
+
 	</head>
+
 	<body>
+
 		<div>
-			<form method = "POST"  action="/post/">
-			{% csrf_token  %}
-			{{ form  }}
-			<input type = "submit" class = "btn btn-default" value="create post">
+	
+		<form method = "POST"  action="/post/">
+	
+		{% csrf_token  %}
+		
+	{{ form  }}
+		
+	<input type = "submit" class = "btn btn-default" value="create post">
 		</form>
 		{% for post in posts  %}
 
